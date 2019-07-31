@@ -1,0 +1,10 @@
+{
+	"DATA": {
+		"title": "My project"
+	},
+	"HEADER": {
+		"header": {
+			"logo": "path to logo"
+		}
+	}
+}
