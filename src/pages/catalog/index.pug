@@ -1,7 +1,4 @@
-include component:card
-include component:card2
-
-include module:card
+//- include component:card2
 
 doctype
 html(lang="en")
@@ -10,13 +7,12 @@ html(lang="en")
     meta(name="viewport" content="width=device-width initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title= DATA.title
-  body.page
+  body
    // start h1 
-   h1._heading= DATA.title
+   h1= DATA.title
    // end h1 
 
-   +card-component()
-   +card2-component()
+   //- +card2-component()
 
    // start div 
    div

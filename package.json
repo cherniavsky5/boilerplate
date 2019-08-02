@@ -28,5 +28,11 @@
     "gulp-pug": "^4.0.1",
     "path": "^0.12.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-insert": "^0.5.0",
+    "gulp-pugbem": "^2.2.4",
+    "gulp-util": "^3.0.8",
+    "to-camel-case": "^1.0.0",
+    "yargs": "^13.3.0"
+  }
 }

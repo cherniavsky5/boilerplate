@@ -1,10 +1,10 @@
 'use strict';
 
 //////////
-// EXAMPLE
+// card2
 //////////
 (function($, APP) {
-  APP.Components.Example = {
+  APP.Components.Card2 = {
     init: function() {
       
     }

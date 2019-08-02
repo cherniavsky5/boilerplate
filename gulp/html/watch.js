@@ -6,7 +6,8 @@ const compile = require('./compile');
 
 const methods = {
    'pug:watch': function() {
-      gulp.watch(['./src/pages/**/*.pug', './src/data/**/*.json'], gulp.series(data, compile, server.reload))
+      gulp.watch('./src/**/*.pug', gulp.series(compile, server.reload));
+      gulp.watch('./src/data/**/*.json', gulp.series(data, compile, server.reload))
    }
 }
 

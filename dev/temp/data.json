@@ -1,6 +1,7 @@
 {
 	"DATA": {
-		"title": "My project"
+		"title": "My project",
+		"component": "Card"
 	},
 	"HEADER": {
 		"header": {
