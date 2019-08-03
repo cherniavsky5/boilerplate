@@ -11,14 +11,23 @@ const methods = {
       return gulp
             .src('./src/pages/**/*.pug')
             .pipe(data(function() {
-               return JSON.parse(fs.readFileSync('./dev/temp/data.json'))
+               return JSON.parse(fs.readFileSync('./dev/temp/data.json'));
             }))
             .pipe(insert.transform(function(contents, file) {
-               let regExp = /^include [component|module]+[:]{1}[\w]+$/gim;
+               let regExp = /^include [component|module|modal]+[:]{1}[\w]+$/gim;
 
                return contents.replace(regExp, function(match) {
                   let componentName = match.split(':')[1];
-                  let folder = match.indexOf('component') > -1 ? './components/' : './modules/';
+                  let folder = '';
+
+                  if (match.indexOf('component') > -1) {
+                     folder = './components/'
+                  } else if (match.indexOf('module') > -1) {
+                     folder = './modules/'
+                  } else if (match.indexOf('modal') > -1) {
+                     folder = './modals/'
+                  }
+
                   let pathToComponent = path.relative(file.relative, folder);
             
                   return match.replace(match, `include ${pathToComponent}${path.sep}${componentName}${path.sep}template`);

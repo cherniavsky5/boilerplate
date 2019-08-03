@@ -1,0 +1,17 @@
+/* Переменные */
+@import 'variables.css';
+
+/* Подключение шрифтов */
+@import 'fonts.css';
+
+/* Базовые стили */
+@import 'base/*.css';
+
+/* Стили компонентов */
+@import '../../components/**/*.css';
+
+/* Стили модулей */
+@import '../../modules/**/*.css';
+
+/* Стили проекта */
+@import 'styles.css';
