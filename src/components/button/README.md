@@ -1,14 +1,16 @@
 # Button
 
-```pug
-+component-button(options, attrs)
+## Подключить компонент
 ```
-
-```js
 include { button } from components
 ```
 
-## Options
+## Вызвать компонент
+```pug
++component-button(options, attributes)
+```
+
+### Options
 
 #### title
 
@@ -27,3 +29,6 @@ Default: 'primary'
 ```
 Default: ''
 ```
+
+### Attributes
+Any HTML attribute
