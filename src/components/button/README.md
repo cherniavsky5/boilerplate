@@ -10,7 +10,7 @@ include { button } from components
 +component-button(options, attributes)
 ```
 
-### Options ```object```
+### Options ```js Object```
 
 #### title
 
