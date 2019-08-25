@@ -10,7 +10,19 @@ include { button } from components
  * @param { Object } attrs
 **/
 
-+component-button(options, attrs)
++component-button(options, attributes)
+```
+
+## Example
+
+```js
++component-button({
+  title: 'ClickMe!',
+  type: 'primary'
+}, {
+  class: 'header__button',
+  disabled: true
+})
 ```
 
 ## Options
@@ -41,5 +53,5 @@ Default: ''
 Default: ''
 ```
 
-## Attrs
-Any HTML attribute
+## Attributes
+Any HTML attributes
