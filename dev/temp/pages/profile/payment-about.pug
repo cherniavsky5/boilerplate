@@ -1,0 +1,21 @@
+extends _template
+
+block append settings
+  -
+    var heading = 'Информация по оплате занятий:';
+
+block main-content
+
+  // start content-header 
+  .content-header(class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading= heading
+      
+      ._aside
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+  // end content-body 

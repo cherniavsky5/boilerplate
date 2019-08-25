@@ -1,0 +1,2 @@
+mixin component-badge(data, attrs)
+  span.badge(class=`badge--${data.type}` class=data.size ? `badge--${data.size}` : '')&attributes(attrs)= data.title

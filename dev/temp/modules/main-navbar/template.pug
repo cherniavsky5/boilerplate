@@ -1,0 +1,8 @@
+mixin module-main-navbar(data, attrs)
+  .main-navbar.js-main-navbar&attributes(attrs)
+    ._container.container
+      ._start
+        a._return(href=data.return.href title=data.return.title)= data.return.title
+      ._end
+        a.contact.-tel._contact(href=`tel:${data.tel.value}` title=data.tel.title)
+          span._title= data.tel.value

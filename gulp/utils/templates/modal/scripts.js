@@ -1,12 +1,13 @@
 'use strict';
 
-//////////
-// component-NAME
-//////////
+// modal-NAME
+
 (function($, APP) {
   APP.Modals.CAMEL = {
-    init: function() {
-      return $('.js-modal-NAME').remodal();
+    init: function(options) {
+      var optionsAssign = Object.assign(APP.ModalOptions, options ? options : {});
+
+      return $('.js-modal-NAME').remodal(optionsAssign);
     },
 
     open: function() {

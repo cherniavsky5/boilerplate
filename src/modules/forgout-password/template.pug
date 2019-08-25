@@ -1,0 +1,25 @@
+include { input-text, input-control, button } from components
+
+mixin module-forgout-password(data, attrs)
+  .form-intro&attributes(attrs)
+    form._inner.js-form-forgout-password(action='#' method='post')
+      ._fields
+
+        +component-input-text({
+          type: 'email',
+          name: 'email',
+          placeholder: 'Введите адрес электронной почты*',
+          transparent: true
+        }, {
+          class: 'form-intro__input-text'
+        })
+      
+      ._footer
+        +component-button({
+          title: 'Восстановить'
+        }, {
+          class: 'form-intro__button'
+        })
+
+        ._additional Вы не зарегистрированы? 
+          a._link(href='sign-up.html' title='Зарегистрируйтесь') Зарегистрируйтесь

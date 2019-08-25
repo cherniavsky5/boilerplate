@@ -1,0 +1,69 @@
+include { input-text, input-control, button } from components
+
+mixin module-sign-up(data, attrs)
+  .form-intro&attributes(attrs)
+    form._inner.js-form-sign-up(action='#' method='post')
+      ._fields
+
+        +component-input-text({
+          name: 'name',
+          placeholder: 'Ваше ФИО:*',
+          transparent: true
+        }, {
+          class: 'form-intro__input-text'
+        })
+
+        +component-input-text({
+          type: 'email',
+          name: 'email',
+          placeholder: 'Введите адрес электронной почты*',
+          transparent: true
+        }, {
+          class: 'form-intro__input-text'
+        })
+
+        +component-input-text({
+          type: 'tel',
+          name: 'tel',
+          placeholder: 'Введите номер телефона*',
+          mask: '+7 (999) 999-99-99',
+          transparent: true
+        }, {
+          class: 'form-intro__input-text'
+        })
+
+        +component-input-text({
+          type: 'password',
+          name: 'password',
+          placeholder: 'Введите пароль*',
+          transparent: true,
+          class: 'js-input-password'
+        }, {
+          class: 'form-intro__input-text'
+        })
+
+        +component-input-text({
+          type: 'password',
+          name: 'repassword',
+          placeholder: 'Повторите пароль*',
+          transparent: true
+        }, {
+          class: 'form-intro__input-text'
+        })
+      
+      ._footer
+        +component-button({
+          title: 'Зарегистрироваться'
+        }, {
+          class: 'form-intro__button'
+        })
+
+        ._additional
+          +component-input-control({
+            type: 'checkbox',
+            name: 'agree',
+            label: 'Ознакомлен с политикой конфиденциальности и даю согласие на обработку персональных данных согласно ФЗ №54',
+            checked: true
+          }, {
+            class: 'form-intro__agree'
+          })    

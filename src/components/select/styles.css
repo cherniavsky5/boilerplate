@@ -1,0 +1,63 @@
+.select {
+  .SumoSelect {
+    width: 100%;
+  }
+
+  .SumoSelect > .CaptionCont {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 60px;
+    color: var(--font-color-darken);
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+  }
+
+  .SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont, .SumoSelect.open > .CaptionCont {
+    box-shadow: none;
+    border-color: var(--secondary-color);
+  }
+
+  .SumoSelect > .CaptionCont > span {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 20px;
+    display: block;
+    cursor: inherit;
+  }
+
+  .SumoSelect > .CaptionCont > label {
+    flex-shrink: 0;
+    position: relative;
+    margin-left: 20px;
+    width: 50px;
+    height: 100%;
+  }
+
+  .SumoSelect > .CaptionCont > label > i {
+    background-image: url('data:image/svg+xml,%3Csvg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M7.95 -3.69579e-08L9 0.945946L4.5 5L-4.13486e-08 0.945946L1.05 -2.79824e-07L4.5 3.10811L7.95 -3.69579e-08Z" fill="%230F1516"/%3E%3C/svg%3E%0A');
+  }
+
+  .SumoSelect > .optWrapper {
+    top: 100%;
+    margin-top: 1px;
+    border-color: var(--secondary-color);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.21);
+  }
+
+  .SumoSelect > .optWrapper > .options li.opt {
+    padding: 14px 20px;
+    cursor: pointer;
+  }
+
+  .SumoSelect > .optWrapper > .options li.opt:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .SumoSelect > .optWrapper > .options li.opt.selected {
+    background-color: var(--secondary-color);
+  }
+}

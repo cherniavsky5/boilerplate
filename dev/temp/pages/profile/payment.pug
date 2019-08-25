@@ -1,0 +1,90 @@
+extends _template
+
+block append settings
+  -
+    var heading = 'Оплата абонемента и дополнительных услуг';
+
+block main-content
+
+  // start content-header 
+  .content-header(class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading= heading
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+
+      // start content-main 
+      form.content-main._main(action='#' method='post')
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Шаг 1: Выберите за кого оплатить услуги:
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Шаг 2: Выберите вид абонемента:
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Шаг 3: Выберите за сколько месяцев вы хотите заплатить сейчас:
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Шаг 4: Выберите дополнительные услуги (необязательно):
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Шаг 5: Итоговая стоимость
+
+          .section-body._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Итого:
+
+          .section-body._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+      // end content-main 
+  // end content-body 

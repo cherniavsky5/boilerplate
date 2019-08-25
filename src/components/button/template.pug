@@ -1,0 +1,8 @@
+mixin component-button(data, attrs)
+  if data.href
+    a.button(href=data.href title=data.title class=data.type ? `button--${data.type}` : `button--primary` class=data.size ? `button--${data.size}` : ``)&attributes(attrs)
+      span._title= data.title
+
+  else
+    button.button(class=data.type ? `button--${data.type}` : `button--primary` class=data.size ? `button--${data.size}` : ``)&attributes(attrs)
+      span._title= data.title

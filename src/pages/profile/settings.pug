@@ -1,0 +1,81 @@
+extends _template
+
+block append settings
+  -
+    var heading = 'Настройки личного кабинета';
+
+block main-content
+
+  // start content-header 
+  .content-header(class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading= heading
+      
+      ._aside
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+
+      // start content-main 
+      form.content-main._main(action='#' method='post')
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Персональные данные
+
+          .section-body._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Изменение фотографии профиля
+
+          .section-body._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Изменение пароля для входа
+
+          .section-body._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Мои документы
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        fieldset.content-section._section
+          .section-header._header
+            ._main
+              legend._heading Настройка оповещений
+
+          .section-body._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+      // end content-main 
+  // end content-body 

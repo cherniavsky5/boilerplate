@@ -1,0 +1,18 @@
+mixin component-dropzone(data, attrs)
+  .dropzone-files&attributes(attrs)
+    .fallback
+      .custom-file
+        input(type="file" name=data.name)
+    
+    .dz-message.dz-default._message
+      span._title Перетащите файл в эту область, чтобы загрузить
+        span._muted или 
+          span._select выберите файлы 
+          | на своём компьютере
+
+    .dz-preview
+      .dz-details
+        ._title Текущая фотография
+        
+        .dz-image
+          img._img(data-dz-thumbnail)

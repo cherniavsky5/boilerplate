@@ -1,0 +1,79 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 14px;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+
+  &__photo {
+    flex: 0 0 auto;
+    padding-bottom: 100%;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 20px 15px 15px;
+  }
+
+  &__content {
+    margin-bottom: 15px;
+    padding: * 5px;
+  }
+
+  &__heading {
+    margin: 0 0 15px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  &__property {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    border-bottom: 1px dashed var(--border-color);
+  }
+
+  &__label, &__value {
+    margin-bottom: -2px;
+    background-color: var(--white-color);
+  }
+
+  &__label {
+    padding-right: 3px;
+  }
+
+  &__value {
+    padding-left: 3px;
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__button {
+    flex: 1;
+    margin-right: 6px;
+    padding: 6px 4px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    &::after {
+      content: '';
+      position: relative;
+      top: -1px;
+      margin-left: 5px;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-image: url('data:image/svg+xml,%3Csvg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath opacity="0.7" d="M8.19731 4.01816C8.16737 3.9428 8.12246 3.87395 8.06518 3.81556L4.91919 0.745978C4.86052 0.688737 4.79088 0.643331 4.71423 0.612353C4.63758 0.581374 4.55542 0.56543 4.47246 0.56543C4.3049 0.56543 4.14421 0.630375 4.02573 0.745978C3.96706 0.803218 3.92052 0.871173 3.88877 0.945962C3.85702 1.02075 3.84068 1.10091 3.84068 1.18186C3.84068 1.34535 3.90725 1.50214 4.02573 1.61774L6.10208 3.63753H1.32646C1.15959 3.63753 0.999551 3.70221 0.881554 3.81734C0.763556 3.93247 0.697266 4.08862 0.697266 4.25144C0.697266 4.41427 0.763556 4.57042 0.881554 4.68555C0.999551 4.80068 1.15959 4.86536 1.32646 4.86536H6.10208L4.02573 6.88515C3.96675 6.94222 3.91994 7.01012 3.888 7.08493C3.85606 7.15974 3.83961 7.23999 3.83961 7.32103C3.83961 7.40207 3.85606 7.48232 3.888 7.55713C3.91994 7.63194 3.96675 7.69984 4.02573 7.75691C4.08422 7.81445 4.15381 7.86012 4.23048 7.89129C4.30716 7.92246 4.38939 7.93851 4.47246 7.93851C4.55552 7.93851 4.63776 7.92246 4.71443 7.89129C4.79111 7.86012 4.8607 7.81445 4.91919 7.75691L8.06518 4.68733C8.12246 4.62894 8.16737 4.56009 8.19731 4.48473C8.26024 4.33527 8.26024 4.16762 8.19731 4.01816Z" fill="%230F1516"/%3E%3C/svg%3E%0A');
+      vertical-align: middle;
+    }
+    
+    &:last-child { margin-right: 0; }
+  }
+}

@@ -1,0 +1,42 @@
+include { badge, photo, date, link-more } from components
+
+mixin component-news-card(data, attrs)
+  .news-card&attributes(attrs)
+    ._body
+      ._aside
+        +component-photo({
+          href: data.href,
+          src: data.img
+        }, {
+          class: 'news-card__photo'
+        })
+      
+      ._main
+        ._content
+          if (!data.small && data.date)
+            +component-date({
+              title: data.date
+            }, {
+              class: 'news-card__date'
+            })
+
+          h3._heading
+            a._link(href=data.href title='')= data.title
+          
+          if (data.caption)
+            p._caption= data.caption
+
+        ._footer
+          if (data.more)
+            +component-link-more({
+              title: data.more
+            }, {
+              class: 'news-card__link-more'
+            })
+          
+          if (data.small && data.date)
+            +component-date({
+              title: data.date
+            }, {
+              class: 'news-card__date'
+            })

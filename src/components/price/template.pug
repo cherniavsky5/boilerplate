@@ -1,0 +1,15 @@
+include { badge } from components
+
+mixin component-price(data, attrs)
+  .price&attributes(attrs)
+    if (typeof data.value === 'object')
+      +component-badge({
+        title: data.value.current,
+        type: 'primary'
+      }, {
+        class: 'price__current'
+      })
+      span._old= data.value.old
+    
+    else
+      | #{data.value}

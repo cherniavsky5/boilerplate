@@ -1,0 +1,30 @@
+extends _template
+
+include { personal-news } from modules
+
+block append settings
+  -
+    var heading = 'Персональные новости';
+
+block main-content
+
+  // start content-header 
+  .content-header(class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading= heading
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+
+      // start content-section 
+      +module-personal-news({
+        data: NEWS.all
+      }, {
+        class: 'content-body__section'
+      })
+      // end content-section 
+
+  // end content-body 

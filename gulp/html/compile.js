@@ -1,49 +1,37 @@
 const gulp = require('gulp');
+const gulpif = require('gulp-if');
 const pug = require('gulp-pug');
 const bem = require('gulp-pugbem');
 const data = require('gulp-data');
 const insert = require('gulp-insert');
 const fs = require('fs');
 const path = require('path');
+const plumber = require('gulp-plumber');
+const emitty = require('emitty').setup('dev', 'pug');
 
 const methods = {
-   'pug:compile': function() {
-      return gulp
-            .src('./src/pages/**/*.pug')
-            .pipe(data(function() {
-               return JSON.parse(fs.readFileSync('./dev/temp/data.json'));
-            }))
-            .pipe(insert.transform(function(contents, file) {
-               let regExp = /^include [component|module|modal]+[:]{1}[\w]+$/gim;
+   'pug:compile': function(done) {
+      new Promise((resolve, reject) => {
+         // console.log(global.emittyChangedFile)
+         emitty.scan(global.emittyChangedFile).then(() => {
+            gulp.src('dev/temp/pages/**/*.pug')
+               .pipe(plumber())
+               .pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
+               .pipe(data(function() {
+                  return JSON.parse(fs.readFileSync('./dev/temp/data.json'));
+               }))
+               .pipe(pug({
+                  pretty: true,
+                  plugins: [bem],
+                  verbose: true
+               }))
+               .pipe(gulp.dest('dev'))
+               .on('end', resolve)
+               .on('error', reject);
+         });
+      });
 
-               return contents.replace(regExp, function(match) {
-                  let componentName = match.split(':')[1];
-                  let folder = '';
-
-                  if (match.indexOf('component') > -1) {
-                     folder = './components/'
-                  } else if (match.indexOf('module') > -1) {
-                     folder = './modules/'
-                  } else if (match.indexOf('modal') > -1) {
-                     folder = './modals/'
-                  }
-
-                  let pathToComponent = path.relative(file.relative, folder);
-            
-                  return match.replace(match, `include ${pathToComponent}${path.sep}${componentName}${path.sep}template`);
-               });
-            }))
-            .pipe(pug({
-               basedir: './dev',
-               pretty: true,
-               plugins: [bem]
-            }))
-            .pipe(insert.transform(function(contents, file) {
-               let pathToAssets = path.relative(path.dirname(file.relative), './assets/').replace(/\\/g, '/');
-
-               return contents.replace('assets', pathToAssets);
-            }))
-            .pipe(gulp.dest('./dev'));
+      done();
    }
 };
 

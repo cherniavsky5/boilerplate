@@ -1,0 +1,31 @@
+extends _template.pug
+
+include { button } from components
+
+block append settings
+  -
+    heading = 'Регистрация завершена';
+
+    mainForm = {
+      title: {
+        default: 'Регистрация',
+        primary: 'завершена'
+      },
+      caption: 'Нажмите, чтобы продолжить',
+      success: true
+    };
+
+    returnLink = {
+      href: '../index.html',
+      title: 'Вернуться на главную'
+    };
+
+block main-form
+  .main-form__container
+    .main-form__footer
+      +component-button({
+        href: '../profile/',
+        title: 'Перейти в кабинет родителя'
+      }, {
+        class: 'main-form__button'
+      })

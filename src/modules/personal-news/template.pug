@@ -1,0 +1,21 @@
+include { news-card, button } from components
+
+mixin module-personal-news(data, attrs)
+  section.content-section&attributes(attrs)
+    .section-body._body
+      ._inner
+
+        each news in data.data
+          +component-news-card(news, {
+            class: 'section-body__news-card'
+          })
+    
+    .section-footer._footer
+      ._actions
+        +component-button({
+          title: 'Показать еще',
+          type: 'secondary',
+          size: 'sm'
+        }, {
+          class: 'section-footer__button'
+        })

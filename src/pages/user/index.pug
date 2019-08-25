@@ -1,0 +1,26 @@
+extends _template.pug
+
+include { sign-in } from modules
+
+block append settings
+  -
+    heading = 'Кабинет родителя';
+
+    mainForm = {
+      title: {
+        default: 'Кабинет',
+        primary: 'родителя'
+      },
+      caption: 'Для доступа к личному кабинету, необходимо ввести логин и пароль:'
+    };
+
+    returnLink = {
+      href: '../index.html',
+      title: 'Вернуться на главную'
+    };
+
+block main-form
+
+  +module-sign-in({}, {
+    class: 'main-form__intro'
+  })

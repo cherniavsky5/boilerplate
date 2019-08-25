@@ -1,0 +1,26 @@
+extends _template.pug
+
+include { sign-up } from modules
+
+block append settings
+  -
+    heading = 'Регистрация родителя';
+
+    mainForm = {
+      title: {
+        default: 'Регистрация',
+        primary: 'родителя'
+      },
+      caption: 'Для доступа к личному кабинету, необходимо зарегистрироваться. Заполните все поля:'
+    };
+
+    returnLink = {
+      href: 'index.html',
+      title: 'Вернуться к авторизации'
+    };
+
+block main-form
+
+  +module-sign-up({}, {
+    class: 'main-form__intro'
+  })

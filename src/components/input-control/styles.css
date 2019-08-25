@@ -1,0 +1,190 @@
+.input-control {
+  position: relative;
+  display: inline-block;
+  min-width: 18px;
+  min-height: 18px;
+  vertical-align: middle;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+
+    &[type=radio] {
+      & ~ .input-control {
+        &__toggle {
+          border-radius: 50%;
+
+          &::before {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            bottom: 3px;
+            left: 3px;
+            display: none;
+            background-color: var(--primary-color);
+            border-radius: inherit;
+          }
+        }
+      }
+
+      &:checked {
+        & ~ .input-control__toggle {
+          width: 18px;
+          height: 18px;
+          background-color: var(--white-color);
+  
+          &::before {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &[type=checkbox] {
+      & ~ .input-control {
+        &__toggle {
+          width: 18px;
+          height: 18px;
+          border-radius: var(--border-radius);
+
+          &::before {
+            color: var(--white-color);
+            font-size: 13px;
+          }
+        }
+      }
+
+      &:checked {
+        & ~ .input-control__toggle {
+          background: var(--primary-color) url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 2L4.8125 8L2 5.27273' stroke='%230F1516' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center no-repeat;
+          border-color: var(--primary-color);
+  
+          &::before {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &:disabled {
+      & ~ .input-control__toggle,
+      & ~ .input-label__toggle {
+        opacity: 0.65;
+        cursor: default;
+      }
+    }
+  }
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    vertical-align: middle;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  &__label {
+    position: relative;
+    top: -1px;
+    padding-left: 28px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+
+/*
+.toggle {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  color: var(--white-color);
+  vertical-align: middle;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    @extend .fe;
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 100%;
+  }
+
+  &::before {
+    content: '\e92b';
+    left: 0;
+    padding-left: 2px;
+  }
+
+  &::after {
+    content: '\ea02';
+    right: 0;
+    padding-right: 2px;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked {
+      & ~ .toggle {
+        &__container {
+          background-color: $success-color;
+
+          .toggle__handle {
+            left: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $danger-color;
+    transition: 0.25s;
+    border-radius: 15px;
+  }
+
+  &__handle {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    transition: 0.25s;
+  }
+}
+*/

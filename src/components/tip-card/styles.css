@@ -1,0 +1,48 @@
+.tip-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  padding: 20px 25px;
+  min-height: 100%;
+  color: var(--white-color);
+  background-color: var(--background2-color);
+  overflow: hidden;
+  border-radius: var(--border-radius);
+
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__main {
+    flex: 1 1 auto;
+  }
+
+  &__aside {
+    flex: 0 0 auto;
+    margin-left: 20px;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    right: 43px;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.06);
+    font-size: 128px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}

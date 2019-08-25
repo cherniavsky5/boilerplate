@@ -1,0 +1,5 @@
+mixin component-input-text(data, attrs)
+  .input-text.js-input-text(class=data.transparent ? 'input-text--transparent' : '')&attributes(attrs)
+    ._body
+      input._field(type=data.type ? data.type : 'text' placeholder=data.placeholder value=data.value name=data.name, data-mask=data.mask class=data.class)
+      span._placeholder= data.placeholder

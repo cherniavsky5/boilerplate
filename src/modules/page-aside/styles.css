@@ -1,0 +1,28 @@
+.page-aside {
+  display: flex;
+  flex-direction: column;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    padding: 25px;
+    min-height: 100vh;
+  }
+
+  &__header {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  &__menu-profile {
+    flex: 1 1 auto;
+    padding-left: 15px;
+  }
+}

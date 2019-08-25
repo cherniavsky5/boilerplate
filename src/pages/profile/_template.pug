@@ -1,0 +1,41 @@
+extends ../_template.pug
+
+include { page-aside, main-header, main-footer } from modules
+
+block append page
+
+  // start page-body 
+  .page-body(class='page__body')
+    block page-body
+
+      // start page-aside 
+      +module-page-aside({}, {
+          class: 'page-body__aside'
+      })
+      // end page-aside 
+
+      // start page-main 
+      main.page-main(class='page-body__main')
+
+        // start main-header 
+        +module-main-header({}, {
+            class: 'page-main__header'
+        })
+        // end main-header 
+
+        // start main-content
+        ._barba#barba-wrapper
+          .main-content.js-main-content(class='page-main__content')
+
+            block main-content
+
+          // end main-content 
+
+        // start main-footer 
+        +module-main-footer({}, {
+            class: 'page-main__footer'
+        })
+        // end main-footer 
+
+      // end page-main 
+  // end page-body 

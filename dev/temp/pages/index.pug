@@ -1,0 +1,38 @@
+extends _template
+
+include ..\..\..\dev\temp\components\badge\template
+include ..\..\..\dev\temp\components\input-text\template
+
+
+block page
+
+  // start page-main 
+  .page-main(class=`${classNameBlock}__main`)
+    +component-badge({
+      title: 'Оплачено до 26.09.19',
+      type: 'primary'
+    })
+    br
+    br
+    +component-badge({
+      title: 'Не оплачено',
+      type: 'accent'
+    })
+
+    br
+    br
+
+    +component-input-text({
+      placeholder: 'Имя ребёнка:*',
+    })
+
+    br
+    br
+
+    h1 Lorem ipsum dolor sit amet.
+    h2 Omnis veritatis cumque repellendus placeat!
+    h3 Repellendus labore numquam consectetur sed.
+    h4 Repudiandae, ducimus! Obcaecati, rem officia.
+    h5 Tempora aliquid modi atque consequuntur!
+    h6 Dolor voluptas illo illum accusamus.
+  // end page-main 

@@ -1,0 +1,17 @@
+include { logo-site, menu-profile } from components
+
+mixin module-page-aside(data, attrs)
+  aside.page-aside&attributes(attrs)
+    ._inner.js-page-aside
+    
+      ._header
+        +component-logo-site({}, {
+          class: 'page-aside__logo-site'
+        })
+      
+      ._body
+        +component-menu-profile({}, {
+          class: 'page-aside__menu-profile'
+        })
+      
+      ._footer

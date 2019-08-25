@@ -1,0 +1,8 @@
+mixin component-photo(data, attrs)
+  if (data.href)
+    a.photo(href=data.href title='')&attributes(attrs)
+      img._img(src=data.src alt='')
+  
+  else
+    .photo&attributes(attrs)
+      img._img(src=data.src alt='')

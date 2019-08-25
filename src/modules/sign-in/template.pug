@@ -1,0 +1,44 @@
+include { input-text, input-control, button } from components
+
+mixin module-sign-in(data, attrs)
+  .form-intro&attributes(attrs)
+    form._inner.js-form-sign-in(action='#' method='post')
+      ._fields
+
+        +component-input-text({
+          type: 'text',
+          name: 'login',
+          placeholder: 'Введите E-mail или телефон:*',
+          transparent: true,
+          class: 'js-input-login'
+        }, {
+          class: 'form-intro__input-text'
+        })
+
+        +component-input-text({
+          type: 'password',
+          name: 'password',
+          placeholder: 'Введите пароль*',
+          transparent: true
+        }, {
+          class: 'form-intro__input-text'
+        })
+      
+      ._footer
+        ._additional
+          +component-input-control({
+            type: 'checkbox',
+            name: 'another',
+            label: 'Чужой компьютер'
+          })
+
+          a._forgout(href='forgout-password.html' title='Забыли пароль?') Забыли пароль?
+        
+        +component-button({
+          title: 'Войти в личный кабинет'
+        }, {
+          class: 'form-intro__button'
+        })
+
+        ._additional Вы не зарегистрированы? 
+          a._link(href='sign-up.html' title='Зарегистрируйтесь') Зарегистрируйтесь

@@ -1,0 +1,115 @@
+mixin module-child(type, attrs)
+
+  - var isEdit = (type === 'edit');
+
+  // start content-main 
+  form.content-main(action='#' method='post')&attributes(attrs)
+
+    if !isEdit
+      // start content-section 
+      fieldset.content-section._section
+        .section-header._header
+          ._main
+            legend._heading Шаг 1: Укажите, хотите ли вы записать ребёнка или уже занимаетесь постоянно?*
+
+        .section-body._body
+          ._inner
+            +component-select({
+              name: 'select',
+              options: ['Хочу записать ребёнка', 'Тики-Така Раменки', 'Хочу записать ребёнка', 'Тики-Така Раменки']
+            })
+      // end content-section 
+
+      // start content-section 
+      fieldset.content-section._section
+        .section-header._header
+          ._main
+            legend._heading Шаг 2: Укажите, в какой клуб “Тики-Така” вы хотите записать ребёнка?*
+
+        .section-body._body
+          ._inner
+            +component-select({
+              name: 'select2',
+              options: ['Тики-Така Раменки', 'Хочу записать ребёнка', 'Тики-Така Раменки', 'Хочу записать ребёнка']
+            })
+      // end content-section 
+
+    // start content-section 
+    fieldset.content-section._section
+      .section-header._header
+        ._main
+          legend._heading= isEdit ? 'Персональные данные ребёнка' : 'Шаг 3: Заполните персональные данные ребёнка*'
+
+      .section-body._body
+        ._inner
+          +component-input-text({
+            name: 'name',
+            value: isEdit ? 'Владимир' : '',
+            placeholder: 'Имя ребёнка:*'
+          }, {
+            style: 'margin-bottom: 15px'
+          })
+
+          +component-input-text({
+            name: 'lastname',
+            value: isEdit ? 'Александров' : '',
+            placeholder: 'Фамилия ребёнка:*'
+          }, {
+            style: 'margin-bottom: 15px'
+          })
+
+          +component-input-text({
+            name: 'name',
+            placeholder: 'Отчество ребёнка'
+          }, {
+            style: 'margin-bottom: 15px'
+          })
+
+          +component-input-text({
+            name: 'date',
+            value: isEdit ? '18.12.2010' : '',
+            placeholder: 'Дата рождения:*'
+          }, {
+            style: 'margin-bottom: 15px'
+          })
+
+          +component-input-text({
+            name: 'tel',
+            value: isEdit ? '+7 (977) 288-32-12' : '',
+            placeholder: 'Номер телефона ребёнка (если имеется):',
+            mask: '+7 (999) 999-99-99'
+          })
+    // end content-section 
+
+    // start content-section 
+    fieldset.content-section._section
+      .section-header._header
+        ._main
+          legend._heading= isEdit ? 'Изменение фотографии профиля' : 'Шаг 4: Добавьте фотографию профиля ребёнка*'
+
+      .section-body._body
+        ._inner
+          +component-dropzone({
+            name: 'photo'
+          }, {
+            class: 'js-upload-child-avatar'
+          })
+    // end content-section 
+
+    // start content-section 
+    .content-section._section
+      .section-body._body
+        ._footer
+          ._agree
+            +component-input-control({
+              type: 'checkbox',
+              name: 'agree',
+              label: 'Подтверждаю подлинность документов и несу ответственность согласно федеральному закону'
+            })
+
+          ._actions
+            +component-button({
+              title: isEdit ? 'Сохранить изменения' : 'Добавить ребёнка и записать'
+            })
+    // end content-section 
+  // end content-main 

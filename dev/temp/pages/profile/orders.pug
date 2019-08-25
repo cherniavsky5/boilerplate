@@ -1,0 +1,59 @@
+extends _template
+
+block append settings
+  -
+    var heading = 'Интернет-магазин “Тики-Така”';
+
+block main-content
+
+  // start content-header 
+  .content-header(class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading= heading
+      
+      ._aside
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+
+      // start content-main 
+      .content-main._main
+
+        // start content-section 
+        section.content-section._section
+          .section-header._header
+            ._main
+              h2._heading Текущие заказы
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        section.content-section._section
+          .section-header._header
+            ._main
+              h2._heading Выполненные заказы
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+        // start content-section 
+        section.content-section._section
+          .section-header._header
+            ._main
+              h2._heading Отмененные заказы
+
+          .section-body.-secondary._body
+            ._inner
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+        // end content-section 
+
+      // end content-main 
+  // end content-body 

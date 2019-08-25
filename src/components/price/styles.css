@@ -1,0 +1,14 @@
+.price {
+  &__current {
+    margin-top: -3px;
+  }
+  
+  &__old {
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+    font-size: 13px;
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+}

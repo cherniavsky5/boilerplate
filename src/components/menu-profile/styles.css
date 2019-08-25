@@ -1,0 +1,41 @@
+.menu-profile {
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    margin: 0 0 25px;
+    font-size: 22px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    color: rgba(255, 255, 255, 0.6);
+
+    &--current {
+      color: var(--white-color);
+
+      .menu-profile__link {
+        background-color: #282828;
+        border-radius: 5px 0 0 5px;
+      }
+    }
+
+    &--push {
+      margin-top: auto;
+    }
+  }
+
+  &__link {
+    margin: * -25px * -18px;
+    padding: 14px 25px 14px 18px;
+    display: block;
+  }
+}

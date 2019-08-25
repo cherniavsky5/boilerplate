@@ -1,0 +1,21 @@
+include ..\..\..\..\dev\temp\components\tip-card\template
+
+
+mixin module-work-tips(data, attrs)
+  section.content-section&attributes(attrs)
+    .section-header._header
+      ._main
+        h2._heading= data.heading
+
+    .section-body._body
+      ._inner
+
+        .work-tips._work-tips
+          ._slider.js-slider
+            ._wrapper.js-slider-wrapper
+
+              each tip in data.data
+                ._slide.js-slider-slide
+                  +component-tip-card(tip, {
+                    class: 'section-body__tip-card'
+                  })

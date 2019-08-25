@@ -1,0 +1,8 @@
+mixin component-link-more(data, attrs)
+  if (data.href)
+    a.link-more(href=data.href title=data.title class=data.type ? `link-more--${data.type}` : '')&attributes(attrs)
+      span._title= data.title
+    
+  else
+    .link-more(class=data.type ? `link-more--${data.type}` : '')&attributes(attrs)
+      span._title= data.title

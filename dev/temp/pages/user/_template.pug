@@ -1,0 +1,62 @@
+extends ../_template.pug
+
+include ..\..\..\..\dev\temp\components\logo-site\template
+
+
+include ..\..\..\..\dev\temp\modules\main-navbar\template
+
+
+block append settings
+  -
+    var mainForm = {
+      title: {},
+      caption: '',
+      success: false
+    };
+    var returnLink = {};
+
+block page
+
+  // start page-body 
+  .page-body(class='page__body')
+
+    // start page-main 
+    main.page-main._main
+
+      // start main-navbar 
+      +module-main-navbar({
+        return: returnLink,
+        tel: {
+          title: 'Позвонить',
+          value: '+7 (967) 275-59-13'
+        }
+      }, {
+        class: 'page-main__navbar'
+      })
+      // end main-navbar 
+    
+      // start main-form 
+      .main-form._form
+        ._topbar
+          +component-logo-site({}, {
+            class: 'main-form__logo-site'
+          })
+        
+        ._body#barba-wrapper
+          ._barba.js-barba-container
+            if (mainForm.success)
+              ._icon
+                img._img(src='../../../assets/img/general/success.svg' alt='')
+
+            ._header
+              h1._heading= mainForm.title.default + ' '
+                if (mainForm.title.primary)
+                  span.primary-color= mainForm.title.primary
+              p._caption= mainForm.caption
+
+            block main-form
+      // end main-form 
+
+    // end page-main 
+
+  // end page-body 

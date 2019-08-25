@@ -1,0 +1,29 @@
+include ..\..\..\..\dev\temp\components\news-card\template
+include ..\..\..\..\dev\temp\components\link-more\template
+
+
+mixin module-last-news(data, attrs)
+  section.content-section&attributes(attrs)
+    .section-header._header
+        ._main
+          h2._heading= data.heading
+        
+        if (data.more)
+          ._aside
+            +component-link-more({
+              href: data.more.href,
+              title: data.more.title
+            }, {
+              class: 'section-header__link-more'
+            })
+
+    .section-body._body
+      ._inner
+        .section-slider.-news._slider
+          ._wrapper.js-slider-wrapper
+
+            each news in data.data
+              ._slide.js-slider-slide
+                +component-news-card(news, {
+                  class: 'news-card--sm section-slider__news-card'
+                })

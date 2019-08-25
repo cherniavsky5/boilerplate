@@ -1,0 +1,31 @@
+include ..\..\..\..\dev\temp\components\photo\template
+include ..\..\..\..\dev\temp\components\price\template
+
+
+mixin component-product-card(data, attrs)
+  .product-card&attributes(attrs)
+    ._header
+      +component-photo({
+        href: data.more.href,
+        src: data.img
+      }, {
+        class: 'product-card__photo'
+      })
+    
+    ._body
+      ._content
+        h3._heading
+          a._link(href='#' title='') Тёмная именная форма ФК Тики-Така
+        
+        ._properties
+          ._property
+            span._label= data.price.label
+            
+            ._value
+              +component-price(data.price, {
+                class: 'product-card__price'
+              })
+      
+      ._footer
+        a._button(href='#' title='Подробнее') Подробнее
+        a._button(href='#' title='В корзину') В корзину

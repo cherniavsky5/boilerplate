@@ -1,0 +1,144 @@
+{
+  "personalOffsers": [
+    {
+      "img": "../../assets/img/content/products/1.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": "2 490 ₽"
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/2.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": {
+          "current": " 1 490 ₽",
+          "old": "2 490 ₽"
+        }
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/3.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": {
+          "current": " 1 490 ₽",
+          "old": "2 490 ₽"
+        }
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/4.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": "2 490 ₽"
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/1.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": "2 490 ₽"
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/2.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": {
+          "current": " 1 490 ₽",
+          "old": "2 490 ₽"
+        }
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/3.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": {
+          "current": " 1 490 ₽",
+          "old": "2 490 ₽"
+        }
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    },
+    {
+      "img": "../../assets/img/content/products/4.jpg",
+      "title": "Тёмная именная форма ФК Тики-Така",
+      "price": {
+        "label": "Стоимость:",
+        "value": "2 490 ₽"
+      },
+      "more": {
+        "href": "#",
+        "title": "Подробнее"
+      },
+      "addToCart": {
+        "href": "#",
+        "title": "В корзину"
+      }
+    }
+  ]
+}

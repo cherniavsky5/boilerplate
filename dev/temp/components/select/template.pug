@@ -1,0 +1,5 @@
+mixin component-select(data, attrs)
+  .select
+    select.js-select(name=data.name)&attributes(attrs)
+      each option, id in data.options
+        option(value=id)= option

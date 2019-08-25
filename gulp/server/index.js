@@ -11,14 +11,21 @@ const methods = {
       done();
    },
 
-   'server:reload': function reload(done, stream) {
+   'server:reload': function reload(done) {
       server.reload();
    
       done();
+   },
+
+   'server:stream': function stream(done) {
+      server.stream();
+   
+      // done();
    }
 };
 
 module.exports = {
    init: methods['server:init'],
-   reload: methods['server:reload']
+   reload: methods['server:reload'],
+   stream: methods['server:stream']
 };

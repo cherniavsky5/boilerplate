@@ -1,0 +1,27 @@
+include { badge, link-more } from components
+
+mixin component-tip-card(data, attrs)
+  .tip-card&attributes(attrs)
+    span._number= data.number
+
+    ._body
+      ._main
+        h3._heading= data.heading 
+
+      ._aside
+        +component-badge({
+          title: 'Совет',
+          type: 'primary',
+          size: 'sm'
+        }, {
+          class: 'tip-card__badge'
+        })
+    
+    ._footer
+      +component-link-more({
+        href: data.href,
+        title: 'Приступить к заполнению',
+        type: 'lighten'
+      }, {
+        class: 'tip-card__link-more'
+      })

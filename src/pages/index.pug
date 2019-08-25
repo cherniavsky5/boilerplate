@@ -1,34 +1,36 @@
-//- include component:card
-include component:card2
+extends _template
 
-include module:card
+include { badge, input-text } from components
 
-doctype
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    title= DATA.title
-  body.page
-   // start h1 
-   h1._heading= DATA.title
-   // end h1 
+block page
 
-   //- +card-component()
-   +card2-component()
+  // start page-main 
+  .page-main(class=`${classNameBlock}__main`)
+    +component-badge({
+      title: 'Оплачено до 26.09.19',
+      type: 'primary'
+    })
+    br
+    br
+    +component-badge({
+      title: 'Не оплачено',
+      type: 'accent'
+    })
 
-   // start div 
-   div
-      a(href="#" title="")
-         img(src="assets/", alt="")
-         span Ссылка
-   // end div 
+    br
+    br
 
-   // start ul 
-   ul
-      li Lorem ipsum dolor sit amet.
-      li Iure dolores nostrum cumque sed?
-      li Inventore in dicta perspiciatis omnis.
-      li In, laudantium dignissimos? Totam, deserunt!
-   // end ul 
+    +component-input-text({
+      placeholder: 'Имя ребёнка:*',
+    })
+
+    br
+    br
+
+    h1 Lorem ipsum dolor sit amet.
+    h2 Omnis veritatis cumque repellendus placeat!
+    h3 Repellendus labore numquam consectetur sed.
+    h4 Repudiandae, ducimus! Obcaecati, rem officia.
+    h5 Tempora aliquid modi atque consequuntur!
+    h6 Dolor voluptas illo illum accusamus.
+  // end page-main 

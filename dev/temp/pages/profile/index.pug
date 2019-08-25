@@ -1,0 +1,112 @@
+extends _template
+
+include ..\..\..\..\dev\temp\components\link-more\template
+
+
+include ..\..\..\..\dev\temp\modules\work-tips\template
+include ..\..\..\..\dev\temp\modules\personal-offers\template
+include ..\..\..\..\dev\temp\modules\last-news\template
+
+
+block append settings
+  -
+    var heading = 'Добро пожаловать в личный кабинет';
+
+block main-content
+
+  // start content-header 
+  .content-header(class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading= heading
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+      
+      // start content-section 
+      +module-work-tips({
+        heading: 'Советы по началу работы с личным кабинетом:',
+        data: TIPS.profile
+      }, {
+        class: 'content-body__section'
+      })
+      // end content-section 
+
+      // start section-layout 
+      .section-layout._layout
+        ._grid
+          ._column.-childs
+
+            // start content-section 
+            section.content-section._section
+              .section-header._header
+                ._main
+                  h2._heading Мои дети и информация по оплате:
+                
+                ._aside
+                  +component-link-more({
+                    href: '#',
+                    title: 'История платежей'
+                  }, {
+                    class: 'section-header__link-more'
+                  })
+
+              .section-body.-secondary._body
+                ._inner
+                  | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+            // end content-section 
+
+          ._column.-actions
+
+            // start content-section 
+            section.content-section._section
+              .section-header._header
+                ._main
+                  h2._heading Действующие акции:
+                
+                ._aside
+                  +component-link-more({
+                    href: '#',
+                    title: 'Все акции'
+                  }, {
+                    class: 'section-header__link-more'
+                  })
+
+              .section-body._body
+                ._inner
+                  | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+            // end content-section 
+
+      // end section-layout 
+
+      // start content-section 
+      +module-last-news({
+        heading: 'Последние новости:',
+        more: {
+          href: 'news.html',
+          title: 'Все новости'
+        },
+        data: NEWS.last,
+        slider: true
+      }, {
+        class: 'content-body__section'
+      })
+      // end content-section 
+
+      // start content-section 
+      +module-personal-offers({
+        heading: 'Персональные предложения интернет-магазина:',
+        more: {
+          href: 'shop.html',
+          title: 'Смотреть все'
+        },
+        data: PRODUCTS.personalOffsers,
+        slider: true
+      }, {
+        class: 'content-body__section'
+      })
+      // end content-section 
+
+  // end content-body 

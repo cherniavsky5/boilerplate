@@ -1,0 +1,32 @@
+extends _template
+
+include component:input-text
+include component:input-control
+include component:select
+include component:dropzone
+include component:button
+
+include module:child
+
+block append settings
+  -
+    var heading = 'Редактирование информации о ребёнке';
+
+block main-content
+
+  // start content-header 
+  a.content-header(href='childs.html' title='Вернуться к карточке "Владимир Иванович Александров"' class='main-content__header')
+    ._container.container
+      ._main
+        h1._heading.-back= heading
+      
+      ._aside
+  // end content-header 
+
+  // start content-body 
+  .content-body(class='main-content__body')
+    ._container.container
+
+      +module-child('edit')
+
+  // end content-body 
