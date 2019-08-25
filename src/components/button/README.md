@@ -1,11 +1,9 @@
 # Button
 
-## Include
 ```
 include { button } from components
 ```
 
-## Вызвать компонент
 ```js
 /**
  * @param { Object } options
