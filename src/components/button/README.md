@@ -13,7 +13,7 @@ include { button } from components
 +component-button(options, attrs)
 ```
 
-### Options
+## Options
 
 ```js
 {
@@ -41,5 +41,5 @@ Default: ''
 Default: ''
 ```
 
-### Attrs
+## Attrs
 Any HTML attribute
