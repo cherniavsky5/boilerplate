@@ -1,13 +1,13 @@
 # Button
 
-## Подключить компонент
+## Include
 ```
 include { button } from components
 ```
 
 ## Вызвать компонент
-```pug
-+component-button(options, attributes)
+```js
+component-button(options, attributes)
 ```
 
 ### Options ```js Object```
