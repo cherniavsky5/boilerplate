@@ -7,13 +7,14 @@ include { button } from components
 
 ## Вызвать компонент
 ```js
-component-button(options, attributes)
+/**
+ * @param { Object } options
+ * @param { Object } attrs
+**/
+component-button(options, attrs)
 ```
 
 ### Options
-```js
-Object
-```
 
 #### title
 
@@ -33,5 +34,5 @@ Default: 'primary'
 Default: ''
 ```
 
-### Attributes
+### Attrs
 Any HTML attribute
