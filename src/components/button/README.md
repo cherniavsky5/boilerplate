@@ -11,3 +11,15 @@
 ```
 Default: ''
 ```
+
+#### type
+
+```
+Default: 'primary'
+```
+
+#### size
+
+```
+Default: ''
+```
