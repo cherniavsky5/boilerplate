@@ -37,6 +37,7 @@ include { button } from components
 ### Compiled
 ```html
 <button class="button button--primary header__button" disabled>Button</button>
+
 <a href="index.html" title="Link" class="button button--primary header__link">Link</a>
 ```
 
