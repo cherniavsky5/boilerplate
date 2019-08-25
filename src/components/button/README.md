@@ -15,36 +15,58 @@ include { button } from components
 
 ## Example
 
-```js
-+componentButton({
-  title: 'ClickMe!',
+### Call
+```
++component-button({
+  title: 'Button',
   type: 'primary'
 }, {
   class: 'header__button',
   disabled: true
 })
+
++component-button({
+  href: 'index.html',
+  title: 'Link',
+  type: 'primary'
+}, {
+  class: 'header__link'
+})
+```
+
+### Compiled
+```html
+<button class="button button--primary header__button" disabled>Button</button>
+<a href="index.html" title="Link" class="button button--primary header__link">Link</a>
 ```
 
 ## Options
 
 ```js
 {
+  href: String,
   type: String,
   title: String,
   size: String
 }
 ```
 
-#### type
+#### href
 
 ```
-Default: 'primary'
+Default: ''
 ```
 
 #### title
 
 ```
 Default: ''
+```
+
+#### type
+
+```
+Default: 'primary'
 ```
 
 #### size
