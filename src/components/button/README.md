@@ -1,8 +1,8 @@
 # Button
 
 ## Include
-```
-include { button } from components
+```js
+import { button } from components
 ```
 
 ## Вызвать компонент
