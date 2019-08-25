@@ -590,3 +590,42 @@ span.error {
     opacity: 1;
   }
 }
+
+
+.components {
+  margin: 35px;
+  color: #0F1516;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.component-section {
+  &__container {
+    display: flex;
+  }
+
+  &__header {
+    padding: 25px 0;
+    border-bottom: 1px solid #F4F5F5;
+  }
+
+  &__body {
+    padding: 25px 0;
+  }
+
+  &__main {
+    flex: 1 1 70%;
+    max-width: 70%;
+  }
+
+  &__aside {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  &__name {
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+  }
+}

@@ -14829,10 +14829,10 @@ var _window = $(window);
 
 'use strict';
 
-// component-product-card
+// component-price
 
 (function($, APP) {
-  APP.Components.ProductCard = {
+  APP.Components.Price = {
     init: function(options) {
       
     }
@@ -14841,10 +14841,10 @@ var _window = $(window);
 
 'use strict';
 
-// component-price
+// component-product-card
 
 (function($, APP) {
-  APP.Components.Price = {
+  APP.Components.ProductCard = {
     init: function(options) {
       
     }
@@ -14952,10 +14952,10 @@ var _window = $(window);
 
 'use strict';
 
-// component-main-footer
+// component-last-news
 
 (function($, APP) {
-  APP.Modules.MainFooter = {
+  APP.Modules.LastNews = {
     init: function(options) {
       
     }
@@ -14964,10 +14964,10 @@ var _window = $(window);
 
 'use strict';
 
-// component-last-news
+// component-main-footer
 
 (function($, APP) {
-  APP.Modules.LastNews = {
+  APP.Modules.MainFooter = {
     init: function(options) {
       
     }
@@ -15039,10 +15039,46 @@ var _window = $(window);
 
 'use strict';
 
+// component-page-header
+
+(function($, APP) {
+  APP.Modules.PageHeader = {
+    init: function(options) {
+      
+    }
+  };
+})(jQuery, window.APP);
+
+'use strict';
+
 // component-personal-news
 
 (function($, APP) {
   APP.Modules.PersonalNews = {
+    init: function(options) {
+      
+    }
+  };
+})(jQuery, window.APP);
+
+'use strict';
+
+// component-personal-offers
+
+(function($, APP) {
+  APP.Modules.PersonalOffers = {
+    init: function(options) {
+      
+    }
+  };
+})(jQuery, window.APP);
+
+'use strict';
+
+// component-profile-settings
+
+(function($, APP) {
+  APP.Modules.ProfileSettings = {
     init: function(options) {
       
     }
@@ -15093,30 +15129,6 @@ var _window = $(window);
       $form.validate(options);
 
       return this;
-    }
-  };
-})(jQuery, window.APP);
-
-'use strict';
-
-// component-personal-offers
-
-(function($, APP) {
-  APP.Modules.PersonalOffers = {
-    init: function(options) {
-      
-    }
-  };
-})(jQuery, window.APP);
-
-'use strict';
-
-// component-profile-settings
-
-(function($, APP) {
-  APP.Modules.ProfileSettings = {
-    init: function(options) {
-      
     }
   };
 })(jQuery, window.APP);

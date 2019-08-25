@@ -1,0 +1,27 @@
+extends _template
+
+include ..\..\..\dev\temp\components\badge\template
+include ..\..\..\dev\temp\components\input-text\template
+include ..\..\..\dev\temp\components\button\template
+
+
+block page
+
+  // start page-main 
+  .page-main(class=`${classNameBlock}__main`)
+
+    .components._components
+      section.component-section
+        ._header
+          ._container.container
+            h2._heading Buttons
+
+            code._name +component-button(options, attrs)
+        
+        ._body
+          ._container.container
+
+            ._main
+
+            ._aside
+  // end page-main 
