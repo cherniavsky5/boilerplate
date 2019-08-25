@@ -2,7 +2,7 @@
 
 ## Include
 ```js
-import { button } from components
+import { button } from 'components'
 ```
 
 ## Вызвать компонент
