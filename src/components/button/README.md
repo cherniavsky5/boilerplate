@@ -1,5 +1,7 @@
 # Button
 
+## Pug
+
 ```
 include { button } from components
 ```
@@ -13,9 +15,9 @@ include { button } from components
 +component-button(options, attributes)
 ```
 
-## Example
+### Example
 
-### Call
+#### Call
 ```
 +component-button({
   title: 'Button',
@@ -34,14 +36,14 @@ include { button } from components
 })
 ```
 
-### Compiled
+#### Compiled
 ```html
 <button class="button button--primary header__button" disabled>Button</button>
 
 <a href="index.html" title="Link" class="button button--primary header__link">Link</a>
 ```
 
-## Options
+### Options
 
 ```js
 {
@@ -52,29 +54,32 @@ include { button } from components
 }
 ```
 
-#### href
+##### href
 
 ```
 Default: ''
 ```
 
-#### title
+##### title
 
 ```
 Default: ''
 ```
 
-#### type
+##### type
 
 ```
 Default: 'primary'
 ```
 
-#### size
+##### size
 
 ```
 Default: ''
 ```
 
-## Attributes
+### Attributes
 Any HTML attributes
+
+
+## Javascript
