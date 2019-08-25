@@ -11,7 +11,8 @@ include { button } from components
  * @param { Object } options
  * @param { Object } attrs
 **/
-component-button(options, attrs)
+
++component-button(options, attrs)
 ```
 
 ### Options
