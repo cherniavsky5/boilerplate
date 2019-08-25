@@ -16,7 +16,7 @@ include { button } from components
 ## Example
 
 ```js
-+component-button({
++componentButton({
   title: 'ClickMe!',
   type: 'primary'
 }, {
