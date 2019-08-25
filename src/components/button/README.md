@@ -15,12 +15,10 @@ include { button } from components
 
 ### Options
 
-#### title
-
 ```js
 {
-  title: String,
   type: String,
+  title: String,
   size: String
 }
 ```
@@ -29,6 +27,12 @@ include { button } from components
 
 ```
 Default: 'primary'
+```
+
+#### title
+
+```
+Default: ''
 ```
 
 #### size
