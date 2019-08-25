@@ -17,8 +17,12 @@ include { button } from components
 
 #### title
 
-```
-Default: ''
+```js
+{
+  title: String,
+  type: String,
+  size: String
+}
 ```
 
 #### type
