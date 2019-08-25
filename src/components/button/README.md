@@ -1,8 +1,8 @@
 # Button
 
 ## Include
-```js
-import { button } from 'components'
+```
+include { button } from components
 ```
 
 ## Вызвать компонент
@@ -10,7 +10,10 @@ import { button } from 'components'
 component-button(options, attributes)
 ```
 
-### Options ```js Object```
+### Options
+```js
+Object
+```
 
 #### title
 
