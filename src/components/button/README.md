@@ -4,21 +4,11 @@
 +component-button(options, attrs)
 ```
 
-## Options
+```js
+include { button } from components
+```
 
-table
-  thead
-    tr
-      th Parameter
-      th Type
-      th Default
-      th Description
-  tbody
-    tr
-      td title
-      td string
-      td ''
-      td 
+## Options
 
 #### title
 
