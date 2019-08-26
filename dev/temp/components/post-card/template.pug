@@ -4,15 +4,20 @@ include ..\..\..\..\dev\temp\components\date\template
 include ..\..\..\..\dev\temp\components\link-more\template
 
 
-mixin component-news-card(data, attrs)
-  .news-card&attributes(attrs)
+mixin component-post-card(data, options, attrs)
+  .post-card(class=options.type ? `post-card--${options.type}` : '' class=options.size ? `post-card--${options.size}` : '')&attributes(attrs)
     ._body
       ._aside
         +component-photo({
           href: data.href,
-          src: data.img
+          src: data.img,
+          badge: {
+            title: data.badge,
+            type: 'primary',
+            size: 'sm'
+          }
         }, {
-          class: 'news-card__photo'
+          class: 'post-card__photo'
         })
       
       ._main
@@ -21,7 +26,7 @@ mixin component-news-card(data, attrs)
             +component-date({
               title: data.date
             }, {
-              class: 'news-card__date'
+              class: 'post-card__date'
             })
 
           h3._heading
@@ -33,14 +38,15 @@ mixin component-news-card(data, attrs)
         ._footer
           if (data.more)
             +component-link-more({
+              href: data.href,
               title: data.more
             }, {
-              class: 'news-card__link-more'
+              class: 'post-card__link-more'
             })
           
           if (data.small && data.date)
             +component-date({
               title: data.date
             }, {
-              class: 'news-card__date'
+              class: 'post-card__date'
             })

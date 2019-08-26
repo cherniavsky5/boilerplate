@@ -97,6 +97,12 @@ var _window = $(window);
         app.initComponents = function(fromPjax) {
           // APP.Components.Test.init();
 
+          APP.Modules.WorkTips.init();
+
+          APP.Modules.CurrentShares.init();
+
+          APP.Modules.LatestNews.init();
+
           APP.Modules.MainNavbar.init();
 
           APP.Modules.PageAside.init();

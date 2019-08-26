@@ -1,3 +1,85 @@
 {
-  "title": "Project title"
+  "title": "Project title",
+
+  "social": [
+    {
+      "href": "#",
+      "title": "Facebook"
+    },
+    {
+      "href": "#",
+      "title": "YouTube"
+    },
+    {
+      "href": "#",
+      "title": "Vkontakte"
+    },
+    {
+      "href": "#",
+      "title": "Instagram"
+    }
+  ],
+
+  "menu": {
+    "profile": [
+      {
+        "href": "#",
+        "title": "Главная страница"
+      },
+      {
+        "href": "#",
+        "title": "Мои дети"
+      },
+      {
+        "href": "#",
+        "title": "Информация по оплате"
+      },
+      {
+        "href": "#",
+        "title": "Новости",
+        "count": 3
+      },
+      {
+        "href": "#",
+        "title": "Настройки"
+      },
+      {
+        "href": "#",
+        "title": "Интернет-магазин",
+        "shop": true,
+        "count": 9
+      }
+    ],
+
+    "primary": [
+      {
+        "href": "#",
+        "title": "Главная"
+      },
+      {
+        "href": "#",
+        "title": "Наши залы"
+      },
+      {
+        "href": "#",
+        "title": "Тренеры"
+      },
+      {
+        "href": "#",
+        "title": "Новости"
+      },
+      {
+        "href": "#",
+        "title": "Отзывы"
+      },
+      {
+        "href": "#",
+        "title": "Акции"
+      },
+      {
+        "href": "#",
+        "title": "Контакты"
+      }
+    ]
+  }
 }

@@ -1,3 +1,17 @@
 .main-footer {
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+
+  &__policy {
+    display: inline-block;
+    line-height: 1.1;
+    border-bottom: 1px solid;
+  }
+
+  &__copyright {
+    margin: 0;
+  }
 }

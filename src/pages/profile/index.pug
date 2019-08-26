@@ -1,8 +1,6 @@
 extends _template
 
-include { link-more } from components
-
-include { work-tips, personal-offers, last-news } from modules
+include { work-tips, personal-offers, current-shares, latest-news, child-payment } from modules
 
 block append settings
   -
@@ -24,7 +22,7 @@ block main-content
       // start content-section 
       +module-work-tips({
         heading: 'Советы по началу работы с личным кабинетом:',
-        data: TIPS.profile
+        data: WORKTIPS
       }, {
         class: 'content-body__section'
       })
@@ -36,55 +34,39 @@ block main-content
           ._column.-childs
 
             // start content-section 
-            section.content-section._section
-              .section-header._header
-                ._main
-                  h2._heading Мои дети и информация по оплате:
-                
-                ._aside
-                  +component-link-more({
-                    href: '#',
-                    title: 'История платежей'
-                  }, {
-                    class: 'section-header__link-more'
-                  })
-
-              .section-body.-secondary._body
-                ._inner
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+            +module-child-payment({
+              heading: 'Мои дети и информация по оплате:',
+              more: {
+                href: '#',
+                title: 'История платежей'
+              },
+              data: CHILDPAYMENT
+            })
             // end content-section 
 
           ._column.-actions
 
             // start content-section 
-            section.content-section._section
-              .section-header._header
-                ._main
-                  h2._heading Действующие акции:
-                
-                ._aside
-                  +component-link-more({
-                    href: '#',
-                    title: 'Все акции'
-                  }, {
-                    class: 'section-header__link-more'
-                  })
-
-              .section-body._body
-                ._inner
-                  | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, pariatur!
+            +module-current-shares({
+              heading: 'Действующие акции:',
+              more: {
+                href: '#',
+                title: 'Все акции'
+              },
+              data: CURRENTSHARES
+            })
             // end content-section 
 
       // end section-layout 
 
       // start content-section 
-      +module-last-news({
+      +module-latest-news({
         heading: 'Последние новости:',
         more: {
           href: 'news.html',
           title: 'Все новости'
         },
-        data: NEWS.last,
+        data: LATESTNEWS,
         slider: true
       }, {
         class: 'content-body__section'

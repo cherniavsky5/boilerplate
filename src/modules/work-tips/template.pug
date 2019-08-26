@@ -1,16 +1,29 @@
-include { tip-card } from components
+include { slider-counter, slider-navigation, tip-card } from components
 
 mixin module-work-tips(data, attrs)
   section.content-section&attributes(attrs)
     .section-header._header
       ._main
         h2._heading= data.heading
+      
+      ._aside
+        ._actions
+          +component-slider-counter({}, {
+            class: 'section-header__slider-counter js-work-tips-slider-counter'
+          })
+
+          +component-slider-navigation({
+            prevElClass: 'js-work-tips-slider-prev',
+            nextElClass: 'js-work-tips-slider-next'
+          }, {
+            class: 'section-header__slider-navigation'
+          })
 
     .section-body._body
       ._inner
 
         .work-tips._work-tips
-          ._slider.js-slider
+          ._slider.js-work-tips-slider
             ._wrapper.js-slider-wrapper
 
               each tip in data.data

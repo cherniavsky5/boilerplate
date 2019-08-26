@@ -1,0 +1,35 @@
+.slider-navigation {
+  display: flex;
+
+  &__button {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 10px;
+      background: url('data:image/svg+xml,%3Csvg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7.28735 8.49261L11 4.74655L7.28735 1.00049" stroke="%231A2527" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M10.4985 4.7373L1.15674 4.7373" stroke="%231A2527" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A') center no-repeat;
+    }
+
+    &--prev {
+      &::before {
+        transform: scale(-1, 1);
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+}

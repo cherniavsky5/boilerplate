@@ -1,9 +1,9 @@
 'use strict';
 
-// component-last-news
+// component-social-buttons
 
 (function($, APP) {
-  APP.Modules.LastNews = {
+  APP.Components.SocialButtons = {
     init: function(options) {
       
     }

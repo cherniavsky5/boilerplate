@@ -20,6 +20,7 @@ function img() {
 
 function scripts() {
   return gulp.src([
+    './node_modules/swiper/dist/js/swiper.js',
     './node_modules/sticky-kit/dist/sticky-kit.js',
     './node_modules/barba.js/dist/barba.js',
     './node_modules/air-datepicker/dist/js/datepicker.js',

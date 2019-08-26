@@ -16,7 +16,7 @@ const methods = {
 
       gulp.watch('dev/temp/**/*.pug', gulp.series(compile, server.reload));
       
-      gulp.watch('./src/data/**/*.json', gulp.series(data, transform, compile, server.reload));
+      gulp.watch('./src/**/*.json', gulp.series(data, transform, compile, server.reload));
    }
 }
 

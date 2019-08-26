@@ -1,3 +1,25 @@
+include ..\..\..\..\dev\temp\components\menu-primary\template
+include ..\..\..\..\dev\temp\components\button\template
+include ..\..\..\..\dev\temp\components\profile\template
+
+
 mixin module-main-header(data, attrs)
   .main-header&attributes(attrs)
-    h2 main-header
+    
+    +component-menu-primary(DATA.menu.primary, {
+      class: 'main-header__menu-primary'
+    })
+
+    ._aside
+      +component-profile({
+        name: 'Александрова Е.А.'
+      }, {
+        class: 'main-header__profile'
+      })
+      
+      +component-button({
+        href: '#',
+        title: 'Оплатить занятия'
+      }, {
+        class: 'main-header__button'
+      })

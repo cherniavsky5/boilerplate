@@ -1,0 +1,29 @@
+include { profile, input-control } from components
+
+mixin component-select-card(data, attrs)
+  label.select-card&attributes(attrs)
+    ._header
+      +component-profile({
+        img: data.img,
+        name: data.name,
+        badge: data.badge
+      }, {
+        class: 'select-card__profile'
+      })
+
+    ._body
+      ._properties
+        each property in data.properties
+          ._property
+            span._label= property.label
+            span._value(class=(property.value === 'Отсутствует' ? 'select-card__property--missing' : ''))= property.value
+
+    ._footer
+      +component-input-control({
+        type: 'checkbox',
+        name: 'child',
+        label: 'Выбрать для оплаты',
+        modifier: 'muted'
+      }, {
+        class: 'select-card__input-control'
+      })

@@ -1,5 +1,5 @@
 mixin component-input-control(data, attrs)
-  label.input-control&attributes(attrs)
+  label.input-control(class=data.modifier ? `input-control--${data.modifier}` : '')&attributes(attrs)
     input._input(type=data.type name=data.name checked=data.checked ? data.checked : false)
     span._toggle
     if data.label

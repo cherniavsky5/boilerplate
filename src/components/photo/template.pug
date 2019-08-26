@@ -1,8 +1,31 @@
+include { badge } from components
+
 mixin component-photo(data, attrs)
+
   if (data.href)
     a.photo(href=data.href title='')&attributes(attrs)
-      img._img(src=data.src alt='')
+      if (data.src)
+        img._img(src=data.src alt='')
+
+      if (data.badge)
+        +component-badge({
+          title: data.badge.title,
+          type: data.badge.type,
+          size: data.badge.size
+        }, {
+          class: 'photo__badge'
+        })
   
   else
     .photo&attributes(attrs)
-      img._img(src=data.src alt='')
+      if (data.src)
+        img._img(src=data.src alt='')
+
+      if (data.badge)
+        +component-badge({
+          title: data.badge.title,
+          type: data.badge.type,
+          size: data.badge.size
+      }, {
+        class: 'photo__badge'
+      })

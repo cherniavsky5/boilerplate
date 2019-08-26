@@ -1,0 +1,38 @@
+.child-payment {
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    flex: 1 1 auto;
+    position: relative;
+    padding: 12px 20px 20px;
+    background-color: var(--light-color);
+    overflow: hidden;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+    margin-top: 15px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: #B2BABC;
+    font-size: 14px;
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: calc(50% - 7.5px);
+  }
+}
