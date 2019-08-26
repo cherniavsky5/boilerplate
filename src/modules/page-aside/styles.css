@@ -21,6 +21,10 @@
     flex: 1 1 auto;
   }
 
+  &__footer {
+    margin-top: 30px;
+  }
+
   &__menu-profile {
     flex: 1 1 auto;
     padding-left: 15px;

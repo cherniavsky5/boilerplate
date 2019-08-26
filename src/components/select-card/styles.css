@@ -1,0 +1,59 @@
+.select-card {
+  display: flex;
+  flex-direction: column;
+  width: 276px;
+  min-height: 100%;
+  background-color: var(--white-color);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+
+  &__header {
+    padding: 17px 15px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    padding: 15px;
+  }
+
+  &__footer {
+    padding: 12px 15px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  &__property {
+    margin-bottom: 10px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  &__label {
+    margin-bottom: 3px;
+    display: block;
+    color: #B2BABC;
+    font-size: 12px;
+  }
+
+  &__value {
+    &--missing {
+      font-style: italic;
+    }
+  }
+
+  &__input-control {
+    min-width: 22px;
+    min-height: 22px;
+
+    .input-control__input[type=checkbox] ~ .input-control__toggle {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+    }
+
+    .input-control__label {
+      top: 0;
+    }
+  }
+}

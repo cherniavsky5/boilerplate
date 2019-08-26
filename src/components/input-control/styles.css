@@ -6,6 +6,17 @@
   vertical-align: middle;
   user-select: none;
 
+  &--muted {
+    color: var(--muted-color);
+
+    .input-control {
+      &__toggle {
+        border-color: var(--secondary-color);
+        background: var(--secondary-color) url('data:image/svg+xml,%3Csvg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10 1L3.8125 7L1 4.27273" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A') center no-repeat;
+      }
+    }
+  }
+
   &__input {
     position: absolute;
     width: 1px;
@@ -59,7 +70,7 @@
 
       &:checked {
         & ~ .input-control__toggle {
-          background: var(--primary-color) url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 2L4.8125 8L2 5.27273' stroke='%230F1516' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center no-repeat;
+          background: var(--primary-color) url('data:image/svg+xml,%3Csvg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10 1L3.8125 7L1 4.27273" stroke="%230F1516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A') center no-repeat;
           border-color: var(--primary-color);
   
           &::before {

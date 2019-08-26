@@ -1,0 +1,21 @@
+include { photo, badge } from components
+
+mixin component-profile(data, attrs)
+  .profile&attributes(attrs)
+    +component-photo({
+      src: data.img
+    }, {
+      class: 'profile__photo'
+    })
+
+    ._content
+      p._name= data.name
+      
+      if (data.badge)
+        +component-badge({
+          title: data.badge.title,
+          type: data.badge.type,
+          size: 'sm'
+        }, {
+          class: 'profile__badge'
+        })

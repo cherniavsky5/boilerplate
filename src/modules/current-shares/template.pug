@@ -1,0 +1,31 @@
+include { post-card } from components
+
+mixin module-current-shares(data, attrs)
+  section.content-section._sections&attributes(attrs)
+    .section-header._header
+      ._main
+        h2._heading= data.heading
+      
+      ._aside
+        +component-link-more({
+          href: data.more.href,
+          title: data.more.title
+        }, {
+          class: 'section-header__link-more'
+        })
+
+    .section-body._body
+      ._inner          
+
+        .current-shares._current-shares
+          ._slider.js-current-shares-slider
+            ._wrapper.js-slider-wrapper
+
+              each share in data.data
+                ._slide.js-slider-slide
+                  +component-post-card(share, {
+                    type: 'share',
+                    size: 'sm'
+                  }, {
+                    class: 'section-body__post-card'
+                  })

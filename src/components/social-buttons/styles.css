@@ -1,0 +1,34 @@
+.social-buttons {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    margin-right: 9px;
+
+    &:last-child { margin-right: 0; }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background-color: #232323;
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+    }
+
+    svg {
+      fill-opacity: 0.6;
+    }
+  }
+}

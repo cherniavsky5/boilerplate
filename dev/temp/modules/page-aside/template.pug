@@ -1,5 +1,6 @@
 include ..\..\..\..\dev\temp\components\logo-site\template
 include ..\..\..\..\dev\temp\components\menu-profile\template
+include ..\..\..\..\dev\temp\components\social-buttons\template
 
 
 mixin module-page-aside(data, attrs)
@@ -12,8 +13,14 @@ mixin module-page-aside(data, attrs)
         })
       
       ._body
-        +component-menu-profile({}, {
+        +component-menu-profile({
+          heading: 'Меню родителя:',
+          data: DATA.menu.profile
+        }, {
           class: 'page-aside__menu-profile'
         })
       
       ._footer
+        +component-social-buttons(DATA.social, {
+          class: 'page-aside__social-buttons'
+        })

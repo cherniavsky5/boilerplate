@@ -1,15 +1,16 @@
 .button {
   position: relative;
-  padding: 21px 30px;
+  padding: 14px 20px;
   display: inline-block;
   min-width: 170px;
   color: var(--font-color-darken);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1;
   text-align: center;
   text-overflow: ellipsis;
   border: 1px solid;
+  outline: 0;
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
@@ -30,10 +31,21 @@
     border-radius: var(--border-radius);
   }
 
-  &--sm {
-    padding: 14px 13px;
-    font-size: 15px;
-    font-weight: 500;
+  &--md {
+    padding: 16px 25px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &--lg {
+    padding: 21px 30px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
   }
 
   &.is-loading {

@@ -1,17 +1,12 @@
 mixin component-menu-profile(data, attrs)
   nav.menu-profile&attributes(attrs)
-    h3._heading Меню родителя:
+    h3._heading= data.heading
 
     ul._list
-      li._item.-current
-        a._link(href='index.html' title='Главная страница') Главная страница 
-      li._item
-        a._link(href='childs.html' title='Мои дети') Мои дети 
-      li._item
-        a._link(href='#' title='Информация по оплате') Информация по оплате
-      li._item
-        a._link(href='news.html' title='Новости') Новости
-      li._item
-        a._link(href='#' title='Настройки') Настройки
-      li._item.-push
-        a._link(href='shop.html' title='Интернет-магазин') Интернет-магазин
+      each item in data.data
+        li._item(class=item.shop ? 'menu-profile__item--shop' : '')
+          a._link(href=item.href title=item.title)
+            span._title= item.title
+
+            if (item.count)
+              span.count._count= item.count 

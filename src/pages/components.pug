@@ -1,0 +1,24 @@
+extends _template
+
+include { badge, input-text, button } from components
+
+block page
+
+  // start page-main 
+  .page-main(class=`${classNameBlock}__main`)
+
+    .components._components
+      section.component-section
+        ._header
+          ._container.container
+            h2._heading Buttons
+
+            code._name +component-button(options, attrs)
+        
+        ._body
+          ._container.container
+
+            ._main
+
+            ._aside
+  // end page-main 

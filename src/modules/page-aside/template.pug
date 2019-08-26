@@ -1,4 +1,4 @@
-include { logo-site, menu-profile } from components
+include { logo-site, menu-profile, social-buttons } from components
 
 mixin module-page-aside(data, attrs)
   aside.page-aside&attributes(attrs)
@@ -10,8 +10,14 @@ mixin module-page-aside(data, attrs)
         })
       
       ._body
-        +component-menu-profile({}, {
+        +component-menu-profile({
+          heading: 'Меню родителя:',
+          data: DATA.menu.profile
+        }, {
           class: 'page-aside__menu-profile'
         })
       
       ._footer
+        +component-social-buttons(DATA.social, {
+          class: 'page-aside__social-buttons'
+        })

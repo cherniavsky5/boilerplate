@@ -1,0 +1,7 @@
+mixin component-menu-primary(data, attrs)
+  nav.menu-primary&attributes(attrs)
+    ul._list
+      each item in data
+        li._item
+          a._link(href=item.href title=item.title)
+            span._title= item.title

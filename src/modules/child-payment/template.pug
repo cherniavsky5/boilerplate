@@ -1,0 +1,37 @@
+include { button, link-more, select-card } from components
+
+mixin module-child-payment(data, attrs)
+  section.content-section&attributes(attrs)
+    .section-header._header
+      ._main
+        h2._heading= data.heading
+      
+      ._aside
+        +component-link-more({
+          href: data.more.href,
+          title: data.more.title
+        }, {
+          class: 'section-header__link-more'
+        })
+
+    .section-body._body
+      ._inner
+        form.child-payment._child-payment(action='#' methods='post')
+          ._body
+            p._title Мои дети:
+
+            ._slider.js-child-payment-slider
+              ._wrapper.js-slider-wrapper
+
+                each child in data.data
+                  ._slide.js-slider-slide
+                    +component-select-card(child, {
+                      class: 'child-payment__select-card'
+                    })
+
+          ._footer
+            +component-button({
+              title: 'Перейти к выбору и оплате услуг',
+              size: 'md',
+              block: true
+            })
